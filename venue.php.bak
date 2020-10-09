@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="bootstrap-1.11.3-dist/jquery.min.js"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- start menu -->
+<script src="js/simpleCart.min.js"> </script>
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<title>WELCOME TO Industrial Services under TISTR 4.0 </title>
+<style type="text/css">
+h1 {background-color:red;}
+p {background-color:rgb(255,0,0);}
+div {background-color:#FFFFFF;}
+body {background-color: lightblue;}
+</style>
+</head>
+
+<body>
+
+<!--nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+<!--    <div>
+<!--      <ul class="nav navbar-nav">
+<!--       
+<!--
+<!--      </ul>
+<!--      <ul class="nav navbar-nav navbar-right">
+<!--              <li><a href="#"><span class="glyphicon glyphicon-user"></span> ติดต่อ : boonnanida@tistr.or.th</a></li><br>
+<!--      <li><a href="search.php"><span class="glyphicon glyphicon-search"></span>ค้นหาข้อมูล</a></li>
+<!--        <li><a href="../backn/form/form_login.php"><span class="glyphicon glyphicon-log-in"></span> เข้าสูระบบ </a>
+<!--        <li><a href="def.php" target="_blank"><span class="glyphicon glyphicon-info-sign"></span>คู่มือ</a></li>
+<!--      </ul>
+<!--    </div>
+  </div>
+ </nav>-->
+  
+<div class="container"> 
+		<div class="col-md-12" align="right">
+				<a href="http://www.tistr.or.th"target="_blank">TISTR</a>
+		</div>	
+        <div class="col-md-12">		
+				<p><img src="images/banner2.jpg" width="100%"></a></p>
+		</div>
+  <!--   <figure class="effect-bubba">
+				   <img src='images/food.jpg' width="1050" height="200" alt=""/>
+                 <figcaption></figcaption>
+ </figure>-->
+    <div class="col-md-1">
+      <ul class="nav nav-pills nav-stacked">
+	    <a href="index.php" class="btn btn-primary" ><center>หน้าหลัก</center></a>
+	  </ul>
+	</div>
+		<!--a href="index.php"><input class="button5" type="button" value="Home"></a-->
+		<div class="clearfix visible-lg"></div>
+		<div class="row">
+				<div class="col-md-12" align="left">
+				<table class="table">
+					<tbody>
+						<tr>
+							<td width="100%"><span style="font-weight:bold"><h2>รายละเอียดการเดินทาง</h2></span><br>
+								<center><img src="images/venue1.jpg"></center>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			    </div>
+			</div>
+				
+				<div class="col-md-12" align="center">
+				<table class="">
+					<tbody>
+						<tr>
+							<td width="10%"><span style="font-weight:bold"><h2>แผนที่โรงแรมเจ้าพระยาปาร์ค กรุงเทพฯ</h2></span><p>
+							<center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.559225266701!2d100.57229996749231!3d13.795835861835856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29c352999360f%3A0xe8a9e3c14a7878e4!2z4LmC4Lij4LiH4LmB4Lij4Lih4LmA4LiI4LmJ4Liy4Lie4Lij4Liw4Lii4Liy4Lib4Liy4Lij4LmM4LiE!5e0!3m2!1sth!2sth!4v1547781499275" width="640" height="480"></iframe><br><br>แผนที่โรงแรมโรงแรมเจ้าพระยาปาร์ค 247 ถนนรัชดาภิเษก แขวง ดินแดง เขต ดินแดง กรุงเทพมหานคร 10400</center><br><br>
+ 							</td>
+						</tr>
+					</tbody>
+				</table>
+			    </div>
+				<div class="row">
+			      <div class="col-md-12" align="justify">
+				<table class="" align="center">
+					<tbody>
+							<td width="10%"><span style="font-weight:bold"><br><center>Contact us</center></span><br>
+								<span style="font-weight:bold"><center>หน่วยฝึกอบรม  ศูนย์ทดสอบและมาตรฐานวิทยา</center></span>
+								<span style="font-weight:bold"><center>Thailand Institute of Scientific and Technological Research (TISTR)</center></span>
+								<center>35 Mu 3, Technopolis, Klong 5, Klong Luang, Pathum Thani 12120, Thailand</center>
+								<center>Phone + (66)2577-9517 , Fax + (66)2577-9009 , Call Center + (66)2577-9300 </center><br>
+								<center>Email: tistrcustomer@tistr.or.th</center><p><p>
+							</td>
+						<tr>
+					<div class="clearfix visible-lg"></div>
+			    </table>
+				</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+<title>โครงการพัฒนาและส่งเสริมความสัมพันธ์กับลูกค้า</title>
+</head>
+<body>
+
+<form method="POST" name="form1" id="form1" class="cd-form floating-labels floating-label-other">
+		<fieldset class="border">
+        <img width="100%" src="images/Food-industry600429.jpg">
+        </fieldset>
+    
+        <fieldset class="border">
+        <div align="center">
+			<div class="legend2">การลงทะเบียนสมบูรณ์</div>
+            <legend>โครงการพัฒนาและส่งเสริมความสัมพันธ์กับลูกค้า</legend>
+            <legend>25 สิงหาคม 2560,<br>โรงแรมบางกอกชฎา ถ.รัชดาภิเษก เขตห้วยขวาง กรุงเทพฯ<br><br>Thailand Institute of Scientific and Technological Research (TISTR)</legend>
+            </div>
+        </div>	
+            <a href="index.php"><input class="button5" type="button" value="Home"></a> 
+            <!--a href="index.php"><font color="red"> Home </font></A-->
+			<div class="error-message">
+                <a href="index.php"><p>เนื่องจากมีผู้ลงทะเบียนสัมมนาจำนวนมาก</p></a>
+				<p>กรณุารอการยืนยันทางอีเมลจากผู้ดูแลระบบ***</p>
+			</div>
+
+            <!--legend>สอบถามข้อมูลเพิ่มเติม</legend-->
+			<div class="row">
+				  <div class="col-md-3"></div>
+			      <div class="col-md-8" align="justify">
+				<table class="" align="center">
+					<tbody>
+					<tr>
+					</tr>
+						<tr>
+							<td width="10%"><span style="font-weight:bold"><br><center>Contact us</center></span><br>
+								<span style="font-weight:bold"><center>หน่วยฝึกอบรม  กลุ่มบริการอุตสาหกรรม</center></span>
+								<span style="font-weight:bold"><center>Thailand Institute of Scientific and Technological Research (TISTR)</center></span>
+								<center>35 Mu 3, Technopolis, Klong 5, Klong Luang, Pathum Thani 12120, Thailand</center>
+								<center>Phone + (66)2577-9517 , Fax + (66)2577-9009 , Call Center + (66)2577-9300 </center><br>
+								<center>Email: training@tistr.or.th</center><p><p>
+							</td>
+						<tr>
+					<div class="clearfix visible-lg"></div>
+			    </table>
+				</div>
+            <!--legend>Asking for Information<br> Ms. Pimprapai Supornrat (02577-9245), Mrs. Jansuda Kampa (02577-9155)</legend>
+			<legend>E-mail : tistrforum@tistr.or.th</legend-->
+            <!--a href="showmember.php"><input class="button6" type="button" value="รายชื่อผู้เข้าสัมมนา"></a-->
+	        <!--a href="index.php"><input class="button5" type="button" value="Home"></a-->             
+			<center>
+			<a href="https://www.google.com/maps/place/Centara Grand Hotel at Central Lad Phrao, Bangkok/@
+				 13.817900,100.559982,17z/data=!3m1!4b1!4m5!3m4!1s0x30e29c159e3544e3:0x709a5bb981c416ef!8m2!3d13.817879!4d100.560036" target = "_blank"><input class="button2" type="button" value="Google Map"></a>
+			<a href="Annocement.pdf" target = "_blank"><input class="button4" type="button" value="Download Documentation"></a>       
+			</center>
+		</div>
+		</fieldset>
+		
+</form>
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

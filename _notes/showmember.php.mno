@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_member" value="name:ros_ref;datatype:string,name:ros_title;datatype:string,name:ros_name;datatype:blob,name:ros_surname;datatype:blob,name:ros_position;datatype:blob,name:ros_organization;datatype:blob,name:ros_tel;datatype:string,name:ros_fax;datatype:string,name:ros_mobile;datatype:string,name:ros_email;datatype:blob,name:ros_2name;datatype:blob,name:ros_2position;datatype:blob,name:ros_2tel;datatype:string,name:ros_2fax;datatype:string,name:ros_2mobile;datatype:string,name:ros_2email;datatype:blob,name:ros_3name;datatype:blob,name:ros_3position;datatype:blob,name:ros_3tel;datatype:string,name:ros_3fax;datatype:string,name:ros_3mobile;datatype:string,name:ros_3email;datatype:blob,name:ros_status;datatype:string" />
+</info>

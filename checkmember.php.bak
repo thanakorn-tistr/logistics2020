@@ -1,0 +1,110 @@
+<?php session_start();
+if($_SESSION['user_name'] == "")
+ {
+?><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+ <script>alert ('กรุณาเข้าสู่ระบบ')</script>
+ <script>window.location='login.php'</script>
+<?php
+exit();}
+include("style_script.php");
+$k=0;//check refresh
+if($k==0){
+echo "<script>alert('กรุณากดปุ่ม reflesh ถ้าข้อมูลไม่เปลี่ยนแปลงค่ะ')</script>";
+}else{
+	$k++;
+}
+include 'Connections/registration.php'; 
+$sql = "SELECT * FROM roster where seminar = 'Food' ";
+echo "sql is ".$sql;
+$result = $conn->query($sql);
+?>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="register">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Puwanat Tongjok edited by Wut">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <link href="DataTable/datatables.min.css" rel="stylesheet" type="text/css" />
+    <script src="DataTable/datatables.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="./js/manage.js"></script>
+
+
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable({
+        "pagingType": "full_numbers",
+		"scrollX": true
+    });
+} );
+</script>
+<title>ระบบลงทะเบียน</title>
+</head>
+<body>
+
+<form method="POST" name="form1" id="form1" class="cd-form floating-labels floating-label-other">
+		<fieldset class="border">
+        <img width="100%" src="img/symposium.jpg">
+        </fieldset>
+        
+        <fieldset class="border">
+        <div>
+			<div class="legend2">รายชื่อผู้ลงทะเบียน</div>
+          <legend>TISTR’s From Local to Global International Forum: Food Industry 4.0</legend>
+            <legend>12 - 13 มิถุนายน 2017 ณ โรงแรมเซ็นทาราแกรนด์ กรุงเทพฯ<br><br>สถาบันวิจัยวิทยาศาสตร์และเทคโนโลยีแห่ง ประเทศไทย(วว.)</legend>
+		   <button type="button" class="btn btn-basic" onclick="Excel()"><span class="glyphicon glyphicon-list-alt"></span> Excel </button>
+			<button type="button" class="btn btn-danger" onclick="Logout()"><span class="glyphicon glyphicon-off"></span> Logout </button>
+
+			<div class="error-message">
+			  <p>บริหารจัดการทะเบียนผู้เข้าร่วมงาน</p>
+			</div>
+
+<div>
+  <table border="0" align="center" class="display nowrap" id="table_id" width="100%">
+<thead>
+      <tr>
+        <th>ชื่อ-นามสกุล</th>
+        <th>สถานะ</th>
+		<th>ยืนยันการเข้าร่วม</th>
+      </tr>
+</thead>
+<tbody>
+        <?php 
+		     $x=0; //confirm member
+			 $y=0; //notconfirm member
+			 if ($result->num_rows > 0) { while($row = $result->fetch_assoc()) {
+		?>
+        <tr>
+          <td width="24%"><?php echo $row['ros_name']."&nbsp &nbsp".$row['ros_surname']."(รหัส  ".$row['ros_id'].")"; ?></td>
+          <td>  <?php
+                                                   if($row['valid'] == '1'){
+                                                       echo "<font color=blue>".'ยืนยันการเข้าร่วม'."</font>"; 
+                                                       $x++;
+                                                   }  else {
+                                                       echo "<font color=red>".'ยังไม่ยืนยัน'."</font>";
+													   $y++;
+                                                   }
+                                                       ?></td>
+		   <td>
+		   <button type="button" class="btn btn-info" onclick="EditBkM('<?php echo $row['ros_id'];?>')"><span class="glyphicon glyphicon-ok"></span> ยืนยัน </button>
+		   <button type="button" class="btn btn-warning" onclick="EditUndo('<?php echo $row['ros_id'];?>')"><span class="glyphicon glyphicon-edit"></span> ยกเลิกการยืนยัน </button>
+		    <button type="button" class="btn btn-danger" onclick="GotoDeleteBooking('<?php echo $row['ros_id'];?>')"><span class="glyphicon glyphicon-trash"></span> ลบ </button>
+		   </td>
+        </tr>
+        <?php } } else { echo "0 results"; } ?>
+</tbody>
+    </table>
+    <br />
+<?	echo "<br><font color=blue>"." 1) ยืนยันจำนวน ".$x." ราย</font><br><font color=red>2) ไม่ยืนยันจำนวน ". $y."ราย</font>";			?>
+</div>
+
+  </fieldset>
+		
+</form>
+<script src="js/main.js"></script>
+</body>
+</html>

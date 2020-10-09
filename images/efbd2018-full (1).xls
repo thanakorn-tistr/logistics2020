@@ -1,0 +1,75 @@
+
+<!--
+	รหัส password
+Devp@ssw0rd-->
+<!--
+	รหัส password
+Devp@ssw0rd--><html xmlns:o="urn:schemas-microsoft-com:office:office"xmlns:x="urn:schemas-microsoft-com:office:excel"xmlns="http://www.w3.org/TR/REC-html40">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+        <strong>รายงานโครงการเสริมสร้างศักยภาพห้องปฏิบัติการทดสอบผลิตภัณฑ์ SMEs ให้มีคุณภาพตามมาตรฐานสากล</strong><br><br>
+        <div id="SiXhEaD_Excel" align=center x:publishsource="Excel">
+        <table x:str border=1 cellpadding=0 cellspacing=1 width=100% style="border-collapse:collapse"><tr>
+			<td><center><strong>ลำดับ</strong></center></td>
+			<td><center><strong>รหัส</strong></center></td>
+			<td><center><strong>วันที่เข้าร่วม</strong></center></td>
+			<td><center><strong>ชื่อ</strong></center></td>
+			<td><center><strong>นามสกุล</strong></center></td>
+			<td><center><strong>หน่วยงาน</strong></center></td>
+			<td><center><strong>เบอร์โทร</strong></center></td>
+			<td><center><strong>Email</strong></center></td>
+			<td><center><strong>สถานะ</strong></center></td>
+                                                                <tr>
+                                <td align="center" valign="middle">1.</td>
+                                <td align="center" valign="middle">efbd152</td>
+								<td align="center" valign="middle"></td>
+								<td align="center" valign="middle">ice5566</td>
+								<td align="center" valign="middle">weerayut</td>
+								<td align="center" valign="middle">fddf</td>
+								<td align="center" valign="middle">055545454545</td>
+								<td align="center" valign="middle">asdasdasdasd@gmail.com</td>
+                                <td>  <font color=blue>ยืนยันการเข้าร่วม</font></td>
+                                                        </tr></center>
+                                                       
+                                                                                            <tr>
+                                <td align="center" valign="middle">2.</td>
+                                <td align="center" valign="middle">efbd154</td>
+								<td align="center" valign="middle"></td>
+								<td align="center" valign="middle">dfg</td>
+								<td align="center" valign="middle">dfg</td>
+								<td align="center" valign="middle">dfg</td>
+								<td align="center" valign="middle">025165651651</td>
+								<td align="center" valign="middle">sdfsdf@gmail.com</td>
+                                <td>  <font color=blue>ยืนยันการเข้าร่วม</font></td>
+                                                        </tr></center>
+                                                       
+                                                                                            <tr>
+                                <td align="center" valign="middle">3.</td>
+                                <td align="center" valign="middle">smes155</td>
+								<td align="center" valign="middle"></td>
+								<td align="center" valign="middle">asdasd</td>
+								<td align="center" valign="middle">asdasd</td>
+								<td align="center" valign="middle">asdasda65165165</td>
+								<td align="center" valign="middle">1651651561</td>
+								<td align="center" valign="middle">sadasd@gmail.com</td>
+                                <td>  <font color=blue>ยืนยันการเข้าร่วม</font></td>
+                                                        </tr></center>
+                                                       
+                                                                                                    </table>
+                                            <script>
+                                            </script>
+                                            </div>
+											<br><font color=blue> 1) ยืนยันจำนวน 3 ราย</font><br><font color=red>2) ไม่ยืนยันจำนวน ราย</font>                                            <script>
+                                                window.onbeforeunload = function () {
+                                                    return false;
+                                                };
+                                                setTimeout(function () {
+                                                    window.close();
+                                                }, 10000);
+                                            </script>
+                                            </body>
+                                            </html>

@@ -1,0 +1,52 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+function onDelete()
+            {
+                if (confirm('  กรุณายืนยันการลบข้อมูลที่เลือกอีกครั้ง !!!  ') === true)
+                {
+                    return true;
+                } else
+                {
+                    return false;
+                }
+            }
+          
+function GotoDeleteBooking(xx)
+{
+	if(confirm('  กรุณายืนยันการลบอีกครั้ง !!!  '))
+       {
+    
+  		window.location="other/save_delete.php?ros_id="+xx;
+			
+	   }
+    else
+      {
+	     return false;
+      }
+}
+
+function EditBkM(xx)
+            {
+                window.location="other/save_edit.php?ros_id="+xx;
+            }
+function EditUndo(xx)
+            {
+                window.location="other/save_editundo.php?ros_id="+xx;
+            }            
+function OpenBkM(xx)
+            {
+                window.location = "detail_book_mem.php?ID=" + xx;
+            }            
+
+function EditBooking(xx)
+            {
+                window.location="edit_booking.php?ID="+xx;
+            }
+function Logout()
+            {
+                window.location="./other/check_logout.php?";
+            }     
+ 

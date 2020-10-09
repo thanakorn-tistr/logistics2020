@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>ผู้ดูแลระบบ - หน้าหลัก</title>
+        <?php
+            include("style_script.php");
+        ?>
+    </head>
+
+    <body class="flat-blue login-page" style="background-color: skyblue">
+        <div class="app-container">
+        <div class="row content-container">
+                <?//php include("header.php"); ?>
+        
+        <div class="container-fluid">
+             <div class="side-body padding-top">
+            <div class="login-box">
+                <div>
+                    <div class="login-form row">
+                        <div class="col-sm-12 text-center login-header">
+                           
+                           <h4 class="username" style="text-align: center">เข้าสู่ระบบ</h4>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="login-body">
+                                <div class="progress hidden" id="login-progress">
+                                    <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        กำลังเข้าสู่ระบบ...
+                                    </div>
+                                </div>
+                                <form action="other/check_login.php" method="POST" name="formlogin">
+                                    <div class="profile-info">
+                                        
+                                        <p style="text-align: left">
+                                            ชื่อผู้ใช้<input type="text" class="form-control" name="user_name" id="user_name" placeholder="admin@gmail.com"  required/>
+                                            รหัสผ่าน<input type="password" class="form-control" name="pass" id="pass" placeholder="password" required/>
+                                        </p>
+                                        <div class="login-button text-center">
+                                            <input type="submit" class="btn btn-primary" value="Login">
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+             </div>
+        </div>
+        </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,74 @@
+<?php include 'Connections/registration.php'; ?>
+<?php
+$sql = "SELECT * FROM roster where seminar = 'Food' ";
+$result = $conn->query($sql);
+?>
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="register">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Puwanat Tongjok edited by Wut">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <link href="DataTable/datatables.min.css" rel="stylesheet" type="text/css" />
+    <script src="DataTable/datatables.min.js" type="text/javascript"></script>
+
+<script>
+$(document).ready( function () {
+    $('#table_id').DataTable({
+        "pagingType": "full_numbers",
+		"scrollX": true
+    });
+} );
+</script>
+<title>ระบบลงทะเบียน</title>
+</head>
+<body>
+
+<form method="POST" name="form1" id="form1" class="cd-form floating-labels floating-label-other">
+		<fieldset class="border">
+        <img width="100%" src="img/symposium.jpg">
+        </fieldset>
+        
+        <fieldset class="border">
+        <div>
+			<div class="legend2">รายชื่อผู้ลงทะเบียน</div>
+          <legend>"2017 International Symposium on <br>Risk Base Maintenance (RBM) and Risk Base Inspection (RBI)"</legend>
+            <legend>12 - 13 มิถุนายน 2017 ณ โรงแรมเซ็นทาราแกรนด์ กรุงเทพฯ<br><br>สถาบันวิจัยวิทยาศาสตร์และเทคโนโลยีแห่งประเทศไทย(วว.)</legend>
+
+			<div class="error-message">
+			  <p>รายชื่อผู้ลงทะเบียน</p>
+			</div>
+
+<div>
+  <table border="0" align="center" class="display nowrap" id="table_id" width="100%">
+<thead>
+      <tr>
+        <th>ชื่อ (Name)</th>
+        <th>นามสกุล (Surname)</th>
+        <th>หน่วยงาน (organization)</th>
+      </tr>
+</thead>
+<tbody>
+        <?php if ($result->num_rows > 0) { while($row = $result->fetch_assoc()) {?>
+        <tr>
+          <td><?php echo $row['ros_name']; ?></td>
+          <td><?php echo $row['ros_surname']; ?></td>
+          <td width="50%"><?php echo $row['ros_organization']; ?></td>
+        </tr>
+        <?php } } else { echo "0 results"; } ?>
+</tbody>
+    </table>
+    <br />
+</div>
+
+  </fieldset>
+		
+</form>
+<script src="js/main.js"></script>
+</body>
+</html>

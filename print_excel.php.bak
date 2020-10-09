@@ -1,0 +1,200 @@
+<?php
+include 'Connections/registration.php'; 
+
+$strExcelFileName = "RMB&RBI2017".".xls";
+header("Content-Type: application/x-msexcel; name=\"$strExcelFileName\"");
+header("Content-Disposition: inline; filename=\"$strExcelFileName\"");
+header("Pragma:no-cache");
+$sql = mysql_query("select * from roster ORDER BY valid DESC");
+$num = mysql_num_rows($sql);
+?>
+<html xmlns:o="urn:schemas-microsoft-com:office:office"xmlns:x="urn:schemas-microsoft-com:office:excel"xmlns="http://www.w3.org/TR/REC-html40">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+        <strong>รายงานชื่อผู้เข้าร่วมงาน RMB&RBI จำนวน ทั้งหมด <?php echo number_format($num); ?> รายงาน</strong><br><br>
+        <div id="SiXhEaD_Excel" align=center x:publishsource="Excel">
+        <table x:str border=1 cellpadding=0 cellspacing=1 width=100% style="border-collapse:collapse"><tr>
+			<td><center><strong>ลำดับ</strong></center></td>
+			<td><center><strong>รหัส</strong></center></td>
+			<td><center><strong>วันที่เข้าร่วม</strong></center></td>
+			<td><center><strong>ชื่อ</strong></center></td>
+			<td><center><strong>นามสกุล</strong></center></td>
+			<td><center><strong>หน่วยงาน</strong></center></td>
+			<td><center><strong>เบอร์โทร</strong></center></td>
+			<td><center><strong>Email</strong></center></td>
+			<td><center><strong>สถานะ</strong></center></td>
+                            <?php
+                            $i = 1;
+                            if ($num > 0) {
+                                while ($objResult = mysql_fetch_array($sql)) {
+                                    ?>
+                                    <tr>
+                                <td align="center" valign="middle"><?php echo $i++; ?>.</td>
+                                <td align="center" valign="middle"><?php echo $objResult['ros_id']; ?></td>
+								<td align="center" valign="middle"><?php echo $objResult['datein']; ?></td>
+								<td align="center" valign="middle"><?php echo $objResult['ros_name']; ?></td>
+								<td align="center" valign="middle"><?php echo $objResult['ros_surname']; ?></td>
+								<td align="center" valign="middle"><?php echo $objResult['ros_organization']; ?></td>
+								<td align="center" valign="middle"><?php echo $objResult['ros_mobile']; ?></td>
+								<td align="center" valign="middle"><?php echo $objResult['ros_email']; ?></td>
+                                <td>  <?php
+                                                   if($row['valid'] == '1'){
+                                                       echo "<font color=blue>".'ยืนยันการเข้าร่วม'."</font>"; 
+                                                       $x++;
+                                                   }  else {
+                                                       echo "<font color=red>".'ยังไม่ยืนยัน'."</font>";
+													   $y++;
+                                                   }
+                                                       ?></td>
+
+                                <td align="center"  value="<?= $rowsDep2['id_format_coop']; ?>" <? if($ID==""){
+                                            echo "selected";
+                                            }?>><?= $rowsDep2['t_name_format']; ?></td>
+                                        <? $a=$objResult["id_country"];
+                                        $sqlCoun = "SELECT id_country,name_country FROM country where id_country='$a'  ";
+                                        $resultCoun = mysql_query($sqlCoun);	
+                                        $rowsCoun = mysql_fetch_array($resultCoun);
+                                        ?>
+                                        <?php
+                                        $a = $objResult["id_country1"];
+                                        $sqlCoun1 = "SELECT id_country,name_country FROM country where id_country='$a'  ";
+                                        $resultCoun1 = mysql_query($sqlCoun1);
+                                        $rowsCoun1 = mysql_fetch_array($resultCoun1);
+                                        ?>
+                                        <?php
+                                        $a = $objResult["id_country2"];
+                                        $sqlCoun2 = "SELECT id_country,name_country FROM country where id_country='$a'  ";
+                                        $resultCoun2 = mysql_query($sqlCoun2);
+                                        $rowsCoun2 = mysql_fetch_array($resultCoun2);
+                                        ?>
+								<td align="center" value="<?= $rowsCoun['id_country']; ?><?= $rowsCoun1['id_country1']; ?><?= $rowsCoun2['id_country2']; ?>" <? if($ID==""){
+                                            echo "selected";
+                                            }?>><?= $rowsCoun['name_country']; ?><br><?= $rowsCoun1['name_country']; ?><br><?= $rowsCoun2['name_country']; ?></td>										
+                                <td align="center" "><? echo $objResult["organization_coop"]?></td>           
+                                <td align="center" "><? echo $objResult["name_cooperation"]?></td>
+                                                    <? $a=$objResult["id_type_coop"];
+                                                    $sqldep2 = "SELECT id_type_coop,t_name_type FROM type_coop where id_type_coop='$a'  ";
+                                                    $resultDep2 = mysql_query($sqldep2);	
+                                                    $rowsDep2 = mysql_fetch_array($resultDep2);
+                                                    ?>	
+                                <td  align="center" value="<?= $rowsDep2['id_type_coop']; ?>" <? if($ID==""){
+                                                        echo "selected";
+                                                        }?>><?= $rowsDep2['t_name_type']; ?></td>                 
+                                <? //$xsigneddate_coop=explode("/",$objResult['signeddate_coop']);
+                                //$signeddate_coop=$xsigneddate_coop[0]."-".$xsigneddate_coop[1]."-".(($xsigneddate_coop[2]+543)); ?>
+                                <!--td align="center" ><? //echo $objResult["signeddate_coop"]?></td-->		
+
+				<?
+				   //echo "signeddate_coop".$objResult['signeddate_coop'];
+				   $xsigneddate_coop=explode("-",$objResult['signeddate_coop']);
+		           $signeddate_coop=$xsigneddate_coop[2]."-".$xsigneddate_coop[1]."-".(($xsigneddate_coop[0]+543));
+				  if($signeddate_coop!="00-00-543"){?>
+						<td align="center" valign="top"><? echo $signeddate_coop?></td>
+					<?}else{?>
+						<td align="center" valign="top">ไม่ระบุ</td>
+				  <?}?>
+				 <?
+				   //echo "signeddate_coop".$objResult['signeddate_coop'];
+				   $xend_coop=explode("-",$objResult['end_coop']);
+		           $end_coop=$xend_coop[2]."-".$xend_coop[1]."-".(($xend_coop[0]+543));
+				  if($end_coop!="00-00-543"){?>
+						<td align="center" valign="top"><? echo $end_coop?></td>
+					<?}else{?>
+						<td align="center" valign="top">ไม่ระบุ</td>
+				  <?}?>
+								
+                                <td align="center"><? echo $objResult["group_coop"]?>&nbsp;ปี</td>
+             <td align="center">
+                <? //$a=$rs["Department_Code"];
+				$a=$objResult["id_user"];
+				if($b!=0){
+				$sqldep = "SELECT title_name, name, surname FROM member where id_user='$a'  ";
+				$resultDep = mysql_query($sqldep);	
+				$rowsDep = mysql_fetch_array($resultDep);
+				echo $rowsDep['title_name']."".$rowsDep['name']." ".$rowsDep['surname'];
+				}
+/* 		        $sqldep = "SELECT Department_Code,Department_TLongName 
+						   FROM department 
+						   where Department_Code='$a'  ";
+				$resultDep = mysql_query($sqldep);	
+				$rowsDep = mysql_fetch_array($resultDep); */
+				?>
+							
+                <?  $b=$objResult["id_user1"];
+				if($b!=0){
+				?>
+				<br>
+				<?	
+		        $sqldep1 = "SELECT title_name, name, surname FROM member where id_user='$b' ";
+				$resultDep1 = mysql_query($sqldep1);	
+				$rowsDep1 = mysql_fetch_array($resultDep1); 
+				echo $rowsDep1['title_name']."".$rowsDep1['name']." ".$rowsDep1['surname'];
+				}?>				
+                <?  $c=$objResult["id_user2"];
+				if($c!=0){
+				?>
+				<br>
+				<?
+		        $sqldep2 = "SELECT title_name, name, surname FROM member where id_user='$c'  ";
+				$resultDep2 = mysql_query($sqldep2);	
+				$rowsDep2 = mysql_fetch_array($resultDep2); 
+				echo $rowsDep2['title_name']."".$rowsDep2['name']." ".$rowsDep2['surname'];
+				}
+				?>
+                 <?  $d=$objResult["id_user3"];
+				if($d!=0){
+				?>
+				<br>
+				<?	 
+		        $sqldep3 = "SELECT title_name, name, surname FROM member where id_user='$d'  ";
+				$resultDep3 = mysql_query($sqldep3);	
+				$rowsDep3 = mysql_fetch_array($resultDep3); 
+				echo $rowsDep3['title_name']."".$rowsDep3['name']." ".$rowsDep3['surname'];
+				 }
+				?>
+				<br>
+                 <?  $e=$objResult["id_user4"];
+				if($e!=0){
+				?>
+				<br>
+				<?	 
+		        $sqldep4 = "SELECT title_name, name, surname FROM member where id_user='$e'  ";
+				$resultDep4 = mysql_query($sqldep4);	
+				$rowsDep4 = mysql_fetch_array($resultDep4); 
+				echo $rowsDep4['title_name']."".$rowsDep4['name']." ".$rowsDep4['surname'];
+				 }
+				?>  
+                                                    <? $a=$objResult["id_status"];
+                                                    //echo "test  =".$a;
+                                                    $sqldep2 = "SELECT id_status,name_status FROM status where id_status='$a'  ";
+                                                    $resultDep2 = mysql_query($sqldep2);	
+                                                    $rowsDep2 = mysql_fetch_array($resultDep2);
+                                                    //$NumDep	= mysql_num_rows($resultDep);
+                                                    ?>	
+                                <td align="center"  value="<?= $rowsDep2['id_status']; ?>" <? if($ID==""){
+                                                        echo "selected";
+                                                        }?>><?= $rowsDep2['name_status']; ?></td>
+                                                        </tr></center>
+                                                       
+                                                        <?php
+                                                    }
+                                                }
+                                                ?>
+                                            </table>
+                                            <script>
+                                            </script>
+                                            </div>
+                                            <script>
+                                                window.onbeforeunload = function () {
+                                                    return false;
+                                                };
+                                                setTimeout(function () {
+                                                    window.close();
+                                                }, 10000);
+                                            </script>
+                                            </body>
+                                            </html>

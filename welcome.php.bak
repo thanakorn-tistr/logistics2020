@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+  <script src="bootstrap-1.11.3-dist/jquery.min.js"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<!--theme-style-->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- start menu -->
+<script src="js/simpleCart.min.js"> </script>
+<!-- start menu -->
+<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="js/memenu.js"></script>
+<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+<title>WELCOME TO Industrial Services under TISTR 4.0 </title>
+<style type="text/css">
+h1 {background-color:red;}
+p {background-color:rgb(255,0,0);}
+div {background-color:#FFFFFF;}
+body {background-color: lightblue;}
+
+</style>
+</head>
+
+<body>
+
+<!--nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+<!--    <div>
+<!--      <ul class="nav navbar-nav">
+<!--       
+<!--
+<!--      </ul>
+<!--      <ul class="nav navbar-nav navbar-right">
+<!--              <li><a href="#"><span class="glyphicon glyphicon-user"></span> ติดต่อ : boonnanida@tistr.or.th</a></li><br>
+<!--      <li><a href="search.php"><span class="glyphicon glyphicon-search"></span>ค้นหาข้อมูล</a></li>
+<!--        <li><a href="../backn/form/form_login.php"><span class="glyphicon glyphicon-log-in"></span> เข้าสูระบบ </a>
+<!--        <li><a href="def.php" target="_blank"><span class="glyphicon glyphicon-info-sign"></span>คู่มือ</a></li>
+<!--      </ul>
+<!--    </div>
+  </div>
+ </nav>-->
+  
+<div class="container"> 
+		<div class="col-md-12" align="right">
+				<a href="http://www.tistr.or.th"target="_blank">TISTR</a>
+		</div>	
+        <div class="col-md-12">		
+				<p><img src="images/banner2.jpg" width="100%"></a></p>
+		</div>
+  <!--   <figure class="effect-bubba">
+				   <img src='images/food.jpg' width="1050" height="200" alt=""/>
+                 <figcaption></figcaption>
+ </figure>-->
+	<div class="col-md-1">
+      <ul class="nav nav-pills nav-stacked">
+	    <a href="index.php" class="btn btn-primary"><center>หน้าหลัก</center></a>
+	  </ul>
+	</div>
+	
+		<div class="clearfix visible-lg"></div>
+			<div class="col-md-12" align="justify">
+				<table class="" align="center">
+					<tbody>
+						<tr>
+						<br>
+							<td width="10%"><span style="font-weight:bold"><center><h2> โครงการพัฒนาและส่งเสริมความสัมพันธ์กับลูกค้า </center></span>
+							<br>
+								<font color="black">สถาบันวิจัยวิทยาศาสตร์และเทคโนโลยีแห่งประเทศไทย โดยกลุ่มบริการอุตสาหกรรม(บอ.) ได้จัด “โครงการพัฒนาและส่งเสริมความสัมพันธ์กับลูกค้า” ปีงบประมาณ ๒๕๖๐ โดยมีวัตถุประสงค์ในการจัดกิจกรรมเพื่อเสริมสร้างความสัมพันธ์กับลูกค้าและประชาสัมพันธ์งานด้านบริการอุตสาหกรรม ว. และ ท. ของกลุ่ม บอ. ทั้งงานด้านบริการวิเคราะห์ ทดสอบ สอบเทียบ งานด้านการตรวจประเมินและรับรองระบบคุณภาพ งานบริการที่ปรึกษาการจัดทำระบบคุณภาพห้องปฏิบัติการ รวมถึงการให้ข้อมูลงานบริการใหม่ๆ ที่กลุ่ม บอ. ได้ขยายขอบข่าย ตลอดจนการระดมความคิดกับผู้เข้าร่วมงานเพื่อทราบความต้องการในอุตสาหกรรมที่สอดคล้องกับการให้บริการของ วว. พร้อมกับออกบูธประชาสัมพันธ์งานด้านบรรจุภัณฑ์  สื่อวารสารเอกสารด้านวิชาการของ วว. การแสดงตัวอย่างผลิตภัณฑ์งานวิจัย   และการเผยแพร่ผลงานวิจัยที่พร้อมถ่ายทอดเทคโนโลยีให้กับผู้ประกอบการ</font><br><br>
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<!--table class="" align="center">
+					<tbody>
+						<tr>
+							<td width="10%"><span style="font-weight:bold"><center>Contact</center></span>
+								<span style="font-weight:bold"><center>Expert Centre of Innovative Health Food: InnoFood</center></span>
+								<span style="font-weight:bold"><center>Thailand Institute of Scientific and Technological Research  (TISTR)</center></span>
+								<center>35 Mu 3, Technopolis, Klong 5, Klong Luang, Pathum Thani 12120, Thailand</center>
+								<center>Phone + (66)2577-9155  Fax + (66)2577-9177 </center>
+								<center>Email: tistrforum@tistr.or.th</center><p><p>
+							</td>
+						<tr>
+			        </tbody>  
+					<div class="clearfix visible-lg"></div>
+			    </table-->
+			    </div>
+				<div class="row">
+				   <div class="col-md-12" align="justify">
+				<table class="" align="center">
+					<tbody>
+					<tr>
+					</tr>
+						<tr>
+						<br><br>
+							<td width="10%"><span style="font-weight:bold"><br><center>Contact us</center></span><br>
+								<span style="font-weight:bold"><center>หน่วยฝึกอบรม  กลุ่มบริการอุตสาหกรรม</center></span>
+								<span style="font-weight:bold"><center>Thailand Institute of Scientific and Technological Research (TISTR)</center></span>
+								<center>35 Mu 3, Technopolis, Klong 5, Klong Luang, Pathum Thani 12120, Thailand</center>
+								<center>Phone + (66)2577-9517 , Fax + (66)2577-9009 , Call Center + (66)2577-9300 </center><br>
+								<center>Email: tistrcustomer@tistr.or.th</center><p><p>
+							</td>
+						<tr>
+			
+					<div class="clearfix visible-lg"></div>
+			    </table>
+				</div>
+				</div>
+				</div>
+</div>
+</body>
+</html>
